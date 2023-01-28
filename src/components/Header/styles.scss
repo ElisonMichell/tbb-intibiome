@@ -2,32 +2,45 @@
 @import '/src/styles/abstract/mixins';
 
 header {
-  color: $white;
 
   .header-bar {
     position: relative;
     @include size(100%, 5rem);
 
-    img {
-      @include size(auto, 100%);
+    .logo {
+      height: 100%;
       @include horizontal-align;
     }
   }
 
   nav {
-    @include flex-center;
-    background: $primary-color;
 
-    ul {
+    .navigation {
+      position: relative;
+      @include flex-center;
+      @include size(100%, 3rem);
+      background: $primary-color;
+    }
+
+    .drop-down {
+      @include absolute($left: 0, $bottom: 0);
+      display: none;
+      width: 100vw;
+      padding-left: 20%;
+      background: $gray-100;
+      @include translate-bottom;
+    }
+
+    button {
+      color: $white;
+      height: 3rem;
+      @include hover-color;
+      @include horizontal-padding(2.5rem);
+      @include transition(background);
+    }
+
+    li:hover > ul {
       display: flex;
-
-      button {
-        font-weight: 500;
-        @include size(11.875rem, 3rem);
-        img {
-          height: 14px;
-        }
-      }
     }
   }
 }

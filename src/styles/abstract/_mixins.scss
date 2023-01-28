@@ -9,6 +9,10 @@
   transform: translate(50%);
 }
 
+@mixin translate-bottom {
+  transform: translateY(100%);
+}
+
 @mixin center-block {
   display: block;
   margin-left: auto;
@@ -19,4 +23,41 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@mixin hover-color {
+  &:hover {
+    background: $hover-color;
+  }
+}
+
+@mixin horizontal-padding($left, $right:null) {
+  padding-left: $left;
+
+  @if($right){ padding-right: $right; }
+  @else { padding-right: $left; }
+}
+
+@mixin transition($property) {
+  transition: $property 0.2s ease-in-out;
+}
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin absolute($args...) {
+  @include position(absolute, $args...);
+}
+
+@mixin relative($args...) {
+  @include position(relative, $args...);
+}
+
+@mixin fixed($args...) {
+  @include position(fixed, $args...);
 }
