@@ -1,4 +1,4 @@
-.banner {
+.img-fill {
   width: 100%;
 }
 
@@ -16,16 +16,22 @@ main {
     width: 46.5rem;
   }
 
+  section {
+    @include padding-vertical(5rem, 2.5rem); 
+  }
+
   .content-box {
     text-align: center;
     @include center-block;
+    @include title-margin(2.5rem);
+  }
 
-    h2 {
-      margin-bottom: 2.5rem;
+  .list-section {
+    @include title-margin(5rem);
+    
+    .list {
+      @include center-block;
+      @include flex-center(2rem);
     }
   }
-}
-
-section {
-  @include margin-vertical(5rem, 2.5rem); 
 }
