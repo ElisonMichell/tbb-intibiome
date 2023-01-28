@@ -1,0 +1,25 @@
+body {
+  font-family: "Trebuchet-MS";
+  font-size: map-get($font-size, 'sm');
+  font-weight: map-get($font-weight, 'regular');
+}
+
+h2 {
+  text-align: center;
+  color: $primary-color;
+  font-size: map-get($font-size, 'xl');
+  line-height: map-get($line-height, 'xl');
+  font-weight: map-get($font-weight, 'bold');
+  letter-spacing: map-get($letter-spacing, 'xl');
+}
+
+p {
+  color: $text-color;
+  font-size: map-get($font-size, 'md');
+  line-height: map-get($line-height, 'md');
+  letter-spacing: map-get($letter-spacing, 'md');
+}
+
+button {
+  font-size: map-get($font-size, 'sm');
+}

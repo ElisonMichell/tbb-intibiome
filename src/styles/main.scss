@@ -1,5 +1,7 @@
-@import 'abstract/variables';
-@import 'abstract/mixins';
-@import 'base/reset';
+@import 'abstract/variables', 
+        'abstract/mixins';
+
+@import 'base/reset', 
+        'base/typography';
 
 @import 'pages/home';
