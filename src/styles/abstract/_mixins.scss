@@ -31,7 +31,14 @@
   }
 }
 
-@mixin horizontal-padding($left, $right:null) {
+@mixin margin-vertical($top, $bottom:null) {
+  margin-top: $top;
+
+  @if($bottom){ margin-bottom: $bottom; }
+  @else { margin-bottom: $top; }
+}
+
+@mixin padding-horizontal($left, $right:null) {
   padding-left: $left;
 
   @if($right){ padding-right: $right; }
