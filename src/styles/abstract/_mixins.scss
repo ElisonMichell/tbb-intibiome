@@ -19,10 +19,12 @@
   margin-right: auto;
 }
 
-@mixin flex-center {
+@mixin flex-center($gap:null) {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: $gap;
 }
 
 @mixin hover-color {
@@ -31,11 +33,11 @@
   }
 }
 
-@mixin margin-vertical($top, $bottom:null) {
-  margin-top: $top;
+@mixin padding-vertical($top, $bottom:null) {
+  padding-top: $top;
 
-  @if($bottom){ margin-bottom: $bottom; }
-  @else { margin-bottom: $top; }
+  @if($bottom){ padding-bottom: $bottom; }
+  @else { padding-bottom: $top; }
 }
 
 @mixin padding-horizontal($left, $right:null) {
@@ -67,4 +69,11 @@
 
 @mixin fixed($args...) {
   @include position(fixed, $args...);
+}
+
+@mixin title-margin($margin) {
+
+  h2 {
+    margin-bottom: $margin;
+  }
 }
