@@ -9,10 +9,10 @@
 
 main {
   
-  & :nth-child(1) {
+  & > :nth-child(1) {
     width: 34.375rem;
   }
-  & :nth-child(3) {
+  & > :nth-child(3) {
     width: 46.5rem;
   }
 
@@ -21,7 +21,6 @@ main {
     @include center-block;
 
     h2 {
-      width: 100%;
       margin-bottom: 2.5rem;
     }
   }

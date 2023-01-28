@@ -37,6 +37,9 @@ function App() {
             taboos that surround it.
           </p>
         </section>
+        <section>
+          <h2>our products</h2>
+        </section>
       </main>
     </>
   )
