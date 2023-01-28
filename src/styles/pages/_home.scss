@@ -1,3 +1,7 @@
+.home {
+  padding-bottom: 5rem;
+}
+
 .img-fill {
   width: 100%;
 }
@@ -32,6 +36,23 @@ main {
     .list {
       @include center-block;
       @include flex-center(2rem);
+    }
+
+    .button {
+      @include size(16rem, 4rem);
+      @include center-block;
+      @include transition(filter);
+      background: $primary-color;
+      color: $white;
+      border-radius: 1rem;
+      margin-top: 6.5625rem;
+      font-size: map-get($font-size, 'md');
+      letter-spacing: map-get($letter-spacing, 'md');
+      line-height: map-get($line-height, 'md');
+
+      &:hover {
+        filter: brightness(1.1);
+      }
     }
   }
 }

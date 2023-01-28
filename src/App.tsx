@@ -12,7 +12,7 @@ import photo3 from "/src/assets/photo-3.png"
 
 function App() {
   return (
-    <>
+    <div className="home">
       <Header />
       <img src={banner} alt="banner hero" className="img-fill"/>
       <main>
@@ -92,9 +92,10 @@ function App() {
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit." 
             />
           </div>
+          <button className="button">see more</button>
         </section>
       </main>
-    </>
+    </div>
   )
 }
 
