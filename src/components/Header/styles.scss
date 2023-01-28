@@ -1,0 +1,33 @@
+@import '/src/styles/abstract/variables';
+@import '/src/styles/abstract/mixins';
+
+header {
+  color: $white;
+
+  .header-bar {
+    position: relative;
+    @include size(100%, 5rem);
+
+    img {
+      @include size(auto, 100%);
+      @include horizontal-align;
+    }
+  }
+
+  nav {
+    @include flex-center;
+    background: $primary-color;
+
+    ul {
+      display: flex;
+
+      button {
+        font-weight: 500;
+        @include size(11.875rem, 3rem);
+        img {
+          height: 14px;
+        }
+      }
+    }
+  }
+}
