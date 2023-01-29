@@ -1,7 +1,7 @@
 @import '/src/styles/abstract/variables';
 @import '/src/styles/abstract/mixins';
 
-.navigation {
+.mobile-navigation {
   flex: 1;
   @include relative;
 
@@ -21,13 +21,13 @@
 }
 
 .isOpen-true {
-  ul {
+  .mobile-menu {
     transform: translateX(0%);
   }
 }
 
 .isOpen-false {
-  ul {
+  .mobile-menu {
     transform: translateX(-100%);
   }
 }

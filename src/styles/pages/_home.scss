@@ -63,7 +63,7 @@ main {
       overflow-y: visible;
       overflow-x: scroll;
       @include center-block;
-      @include padding-vertical(2rem);
+      padding: 2rem;
       @include flex-center-vert(2rem);
       @include disable-scrollbar;
 

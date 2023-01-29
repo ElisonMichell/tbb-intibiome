@@ -1,5 +1,4 @@
 import React from 'react'
-import down from '/src/assets/caret-down.svg'
 
 import './styles.scss'
 
@@ -9,8 +8,8 @@ interface MobileMenuProps {
 
 function MobileMenu({isOpen}:MobileMenuProps) {
   return(
-    <nav className={`navigation isOpen-${isOpen}`}>
-      <ul >
+    <nav className={`mobile-navigation isOpen-${isOpen}`}>
+      <ul className='mobile-menu'>
         <li>
           <button>brand philosophy</button>
         </li>
