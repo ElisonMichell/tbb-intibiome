@@ -2,8 +2,6 @@ import React from 'react'
 import logo from '/src/assets/logo.png'
 import down from '/src/assets/caret-down.svg'
 
-import './styles.scss'
-
 function Header() {
   return(
     <header>
