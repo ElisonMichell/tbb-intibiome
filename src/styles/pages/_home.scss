@@ -1,3 +1,9 @@
+.home {
+  @include responsivity('md') {
+    padding-top: 4.375rem;
+  }
+}
+
 .banner {
   @include responsivity('md') {
     display: none;
