@@ -1,0 +1,37 @@
+footer {
+  @include size(100%, 15.125rem);
+  background: $primary-color;
+  margin-top: 5rem;
+
+  ul {
+    padding-top: 3.5rem;
+    @include flex-center;
+
+    button {
+      color: $white;
+      border-right: 2px solid $white;
+      @include hover-underline;
+      @include padding-horizontal(1.5rem);
+    }
+
+    & > :last-child > button {
+      border-right: none;
+    }
+  }
+
+  .footer {
+    @include center-block;
+    @include flex-center;
+    margin-top: 4.625rem;
+    justify-content: space-between;
+    width: 70.875rem;
+
+    .logo {
+      width: 7.25rem;
+    }
+
+    img {
+      cursor: pointer;
+    }
+  }
+}

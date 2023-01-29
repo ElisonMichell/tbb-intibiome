@@ -33,6 +33,12 @@
   }
 }
 
+@mixin hover-underline {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 @mixin padding-vertical($top, $bottom:null) {
   padding-top: $top;
 
