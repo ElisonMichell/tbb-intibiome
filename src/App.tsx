@@ -9,10 +9,11 @@ import productblue from "/src/assets/product-blue.png"
 import photo1 from "/src/assets/photo-1.png"
 import photo2 from "/src/assets/photo-2.png"
 import photo3 from "/src/assets/photo-3.png"
+import Footer from "./components/Footer"
 
 function App() {
   return (
-    <div className="home">
+    <>
       <Header />
       <img src={banner} alt="banner hero" className="img-fill"/>
       <main>
@@ -95,7 +96,8 @@ function App() {
           <button className="button">see more</button>
         </section>
       </main>
-    </div>
+      <Footer />
+    </>
   )
 }
 
