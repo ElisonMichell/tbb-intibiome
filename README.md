@@ -7,7 +7,6 @@
 <div align="center">
   <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/ElisonMichell/tbb-intibiome?color=389CD6&style=for-the-badge" />
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/ElisonMichell/tbb-intibiome?color=389CD6&style=for-the-badge" />
-  <img alt="GitHub license" src="https://img.shields.io/github/license/ElisonMichell/tbb-intibiome?color=389CD6&style=for-the-badge" />
   <img alt="Status" src="https://img.shields.io/static/v1?label=Status&message=Complete&color=EE6381&style=for-the-badge" />
   <a href="https://tbb-intibiome-elisonmichell.vercel.app">
     <img alt="Link" src="https://img.shields.io/static/v1?label=Access Page&message=Link&color=309D5F&style=for-the-badge" />
@@ -70,10 +69,6 @@ $ npm run dev
 
 # Now you have a copy of the project to modify and test in your editor.
 ```
-
-## 📝 License
-
-This project is under the MIT license. See the <a href="https://github.com/ElisonMichell/pokemon-universe/blob/pokedex-develop-branch/LICENSE">LICENSE</a> for more information.
 
 ##
 
