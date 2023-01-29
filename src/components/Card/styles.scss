@@ -2,7 +2,8 @@
 @import '/src/styles/abstract/mixins';
 
 .card {
-  width: 356px;
+  width: 22.25rem;
+  min-width: 22.25rem;
   overflow: hidden;
   min-height: max-content;
   text-align: center;

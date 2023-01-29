@@ -1,0 +1,34 @@
+@import '/src/styles/abstract/variables';
+@import '/src/styles/abstract/mixins';
+
+.desktop-navigation {
+  position: relative;
+  background: $primary-color;
+  @include flex-center;
+  @include size(100%, 3rem);
+
+  .drop-down {
+    display: none;
+    width: 100vw;
+    padding-left: 20%;
+    background: $brand-gray;
+    @include translate-bottom;
+    @include absolute($left: 0, $bottom: 0);
+  }
+
+  button {
+    color: $white;
+    height: 3rem;
+    @include hover-color;
+    @include padding-horizontal(2.5rem);
+    @include transition(background);
+  }
+
+  li:hover > ul {
+    display: flex;
+  }
+
+  @include responsivity('md') {
+    display: none;
+  }
+}

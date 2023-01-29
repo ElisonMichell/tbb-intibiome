@@ -3,12 +3,19 @@ footer {
   background: $primary-color;
   margin-top: 5rem;
 
+  @include responsivity('md') {
+    margin-top: 2.5rem;
+    padding-bottom: 4.375rem;
+    @include size(100%, max-content);
+  }
+
   ul {
     padding-top: 3.5rem;
     @include flex-center;
 
     button {
       color: $white;
+      height: auto;
       border-right: 2px solid $white;
       @include hover-underline;
       @include padding-horizontal(1.5rem);
@@ -17,14 +24,37 @@ footer {
     & > :last-child > button {
       border-right: none;
     }
+
+    @include responsivity('md') {
+      @include flex-center-column;
+
+      button {
+        height: 3.75rem;
+        border-right: none;
+        @include relative;
+
+        @include after {
+          background: $white;
+          @include size(1.5rem, 2px);
+          @include absolute($bottom: 0);
+          @include horizontal-align;
+        }
+      }
+
+      & > :last-child > button{
+        @include after {
+          display: none;
+        }
+      }
+    }
   }
 
   .footer {
-    @include center-block;
-    @include flex-center;
     margin-top: 4.625rem;
-    justify-content: space-between;
-    width: 70.875rem;
+    @include center-block;
+    @include flex-between;
+    @include padding-horizontal(2rem);
+    @include width-range(100%, 70.875rem);
 
     .logo {
       width: 7.25rem;
@@ -32,6 +62,11 @@ footer {
 
     img {
       cursor: pointer;
+    }
+
+    @include responsivity('md') {
+      margin-top: 2.5rem;
+      @include flex-center-column-reverse(6.75rem);
     }
   }
 }

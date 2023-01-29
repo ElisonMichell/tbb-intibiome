@@ -1,0 +1,33 @@
+@import '/src/styles/abstract/variables';
+@import '/src/styles/abstract/mixins';
+
+.navigation {
+  flex: 1;
+  @include relative;
+
+  ul {
+    background: $primary-color;
+    @include padding-vertical(2.5rem);
+    @include absolute(0,0,0,0);
+  }
+
+  button {
+    @include size(100%, 3rem);
+    @include typography($color:$white, $align:start);
+    @include hover-color;
+    @include padding-horizontal(2.5rem);
+    @include transition(background);
+  }
+}
+
+.isOpen-true {
+  ul {
+    transform: translateX(0%);
+  }
+}
+
+.isOpen-false {
+  ul {
+    transform: translateX(-100%);
+  }
+}

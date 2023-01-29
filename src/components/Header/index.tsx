@@ -1,70 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from '/src/assets/logo.png'
-import down from '/src/assets/caret-down.svg'
 import search from '/src/assets/search.svg'
+import menu from '/src/assets/menu.svg'
+import x from '/src/assets/x.svg'
+import DesktopMenu from '../DesktopMenu'
+import MobileMenu from '../MobileMenu'
 
 function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return(
-    <header>
+    <header className={`isOpen-${isOpen}`}>
       <div className='header-bar'>
+        <button className='menu' onClick={() => setIsOpen(!isOpen)}>
+          <img src={isOpen ? x : menu} alt="menu button" width={24}/>
+        </button>
         <img className='logo' src={logo} alt="logo" />
         <button className='search'>
           <img src={search} alt="search button" />
         </button>
       </div>
-
-      <nav>
-        <ul className='navigation'>
-          <li>
-            <button>about us <img src={down} alt="down icon" height={14} /></button>
-            <ul className='drop-down'>
-              <li>
-                <button>brand philosophy</button>
-              </li>
-              <li>
-                <button>product technology</button>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <button>our products  <img src={down} alt="down icon" height={14} /></button>
-            <ul className='drop-down'>
-              <li>
-                <button>all products</button>
-              </li>
-              <li>
-                <button>intibiome wellness</button>
-              </li>
-              <li>
-                <button>intibiome active</button>
-              </li>
-              <li>
-                <button>intibiome agecare</button>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <button>intimate health  <img src={down} alt="down icon" height={14} /></button>
-            <ul className='drop-down'>
-              <li>
-                <button>article 1</button>
-              </li>
-              <li>
-                <button>article 2</button>
-              </li>
-              <li>
-                <button>article 3</button>
-              </li>
-              <li>
-                <button>faq</button>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <button>contact us</button>
-          </li>
-        </ul>
-      </nav>
+      <DesktopMenu />
+      <MobileMenu isOpen={isOpen} />
     </header>
   )
 }

@@ -1,7 +1,9 @@
 import Card from "./components/Card"
 import Header from "./components/Header"
 import banner from "/src/assets/banner-hero.png"
+import bannermobile from "/src/assets/banner-hero-mobile.png"
 import midbanner from "/src/assets/mid-banner.png"
+import midbannermobile from "/src/assets/mid-banner-mobile.png"
 import icons from "/src/assets/icons.png"
 import productgreen from "/src/assets/product-green.png"
 import productpink from "/src/assets/product-pink.png"
@@ -15,7 +17,8 @@ function App() {
   return (
     <>
       <Header />
-      <img src={banner} alt="banner hero" className="img-fill"/>
+      <img src={banner} alt="banner hero" className="img-fill banner"/>
+      <img src={bannermobile} alt="banner hero" className="img-fill banner-mobile"/>
       <main>
         <section className="content-box">
           <h2>we’re here to help</h2>
@@ -51,30 +54,33 @@ function App() {
 
         <section className="list-section">
           <h2>our products</h2>
-          <div className="list">
-            <Card 
-              photo={productblue} 
-              description="intibiome wellness daily intimate wash"
-              footer="wellness"
-              color="blue"
-            />
-            <Card 
-              photo={productgreen} 
-              description="intibiome active extra protection intimate wash" 
-              footer="active"
-              color="green"
-            />
-            <Card 
-              photo={productpink} 
-              description="intibiome agecare dryness relief intimate wash" 
-              footer="agecare"
-              color="pink"
-            />
+          <div className="carousel">
+            <div className="list">
+              <Card 
+                photo={productblue} 
+                description="intibiome wellness daily intimate wash"
+                footer="wellness"
+                color="blue"
+              />
+              <Card 
+                photo={productgreen} 
+                description="intibiome active extra protection intimate wash" 
+                footer="active"
+                color="green"
+              />
+              <Card 
+                photo={productpink} 
+                description="intibiome agecare dryness relief intimate wash" 
+                footer="agecare"
+                color="pink"
+              />
+            </div>
           </div>
         </section>
 
         <section>
-          <img src={midbanner} alt="banner" className="img-fill"/>
+          <img src={midbanner} alt="banner" className="img-fill banner"/>
+          <img src={midbannermobile} alt="banner" className="img-fill banner-mobile"/>
         </section>
 
         <section className="list-section">
@@ -93,7 +99,9 @@ function App() {
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit." 
             />
           </div>
-          <button className="button">see more</button>
+          <div className="button-container">
+            <button className="button">see more</button>
+          </div>
         </section>
       </main>
       <Footer />

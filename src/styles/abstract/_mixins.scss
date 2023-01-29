@@ -1,7 +1,7 @@
-@mixin respond-below($breakpoint) {
+@mixin responsivity($breakpoint) {
   $breakpoint-value: map-get($breakpoints, $breakpoint);
 
-  @media (min-width: $breakpoint-value) {
+  @media (max-width: $breakpoint-value) {
     @content;
   }
 }
@@ -35,6 +35,11 @@
   height: $height;
 }
 
+@mixin width-range($width, $max-width) {
+  width: $width;
+  max-width: $max-width;
+}
+
 @mixin horizontal-align {
   position: absolute;
   right: 50%;
@@ -55,13 +60,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
   gap: $gap;
 }
 
-@mixin flex-align {
+@mixin flex-center-vert($gap:null) {
   display: flex;
   align-items: center;
+  gap: $gap;
+}
+
+@mixin  flex-between {
+  @include flex-center-vert;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center-column {
+  @include flex-center;
+  flex-direction: column;
+}
+
+@mixin flex-center-column-reverse($gap:null) {
+  @include flex-center;
+  flex-direction: column-reverse;
+  gap: $gap;
 }
 
 @mixin hover-color {
@@ -132,5 +158,26 @@
 
   h2 {
     margin-bottom: $margin;
+  }
+}
+
+@mixin after {
+  &::after {
+    content: "";
+    @content;
+  }
+}
+
+@mixin disable-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin animate($name) {
+  @keyframes #{$name} {
+    @content;
   }
 }

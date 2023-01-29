@@ -1,8 +1,8 @@
 header {
-
   .header-bar {
     position: relative;
-    @include flex-align;
+    background: $white;
+    @include flex-between;
     @include size(100%, 5rem);
 
     .logo {
@@ -10,41 +10,38 @@ header {
       @include horizontal-align;
     }
 
+    .menu {
+      display: none;
+    }
+
     .search {
       display: block;
       height: 24px;
       @include margin-horizontal(auto, 20%);
     }
+
+    @include responsivity('lg') {
+      @include padding-horizontal(1.875rem);
+      .search {
+        @include margin-horizontal(auto, 0);
+      }
+    }
+
+    @include responsivity('md') {
+      @include size(100%, 4.375rem);
+
+      .menu {
+        display: block;
+      }
+    }
   }
-
-  nav {
-
-    .navigation {
-      position: relative;
-      @include flex-center;
-      @include size(100%, 3rem);
-      background: $primary-color;
-    }
-
-    .drop-down {
-      @include absolute($left: 0, $bottom: 0);
-      display: none;
-      width: 100vw;
-      padding-left: 20%;
-      background: $brand-gray;
-      @include translate-bottom;
-    }
-
-    button {
-      color: $white;
-      height: 3rem;
-      @include hover-color;
-      @include padding-horizontal(2.5rem);
-      @include transition(background);
-    }
-
-    li:hover > ul {
-      display: flex;
+  @include responsivity('md') {
+    @include fixed;
+    width: 100%;
+    @include flex-column;
+    
+    &.isOpen-true {
+      inset: 0;
     }
   }
 }
