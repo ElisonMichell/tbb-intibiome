@@ -49,6 +49,10 @@
 - <a href="https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable">Yarn</a>
 - <a href="https://git-scm.com/downloads">Git</a>
 
+## 📱 Responsivity
+
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/97061419/215354238-f0d452fc-5dfe-43b0-b6fa-34e25cb79915.gif)
+
 ## ⚙️ Setting up
 
 ```bash
