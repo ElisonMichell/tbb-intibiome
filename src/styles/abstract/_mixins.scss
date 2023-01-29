@@ -1,3 +1,11 @@
+@mixin respond-below($breakpoint) {
+  $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+  @media (min-width: $breakpoint-value) {
+    @content;
+  }
+}
+
 @mixin size($width, $height) {
   width: $width;
   height: $height;
