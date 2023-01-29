@@ -6,6 +6,30 @@
   }
 }
 
+@mixin typography($family:null, $color:null, $size:null, $align:null, $weight:null, $height:null, $spacing: null) {
+  
+  font-family: $family;
+  text-align: $align;
+  color: $color;
+
+  @if($size) {
+    $size-value: map-get($font-size, $size);
+    font-size: $size-value;
+  }
+  @if($weight) { 
+    $weight-value: map-get($font-weight, $weight);
+    font-weight: map-get($font-weight, $weight-value);
+  }
+  @if($height) {
+    $height-value: map-get($line-height, $height);
+    line-height: map-get($line-height, $height-value);
+  }
+  @if($spacing) {
+    $spacing-value: map-get($letter-spacing, $spacing);
+    letter-spacing: map-get($letter-spacing, $spacing-value);
+  }
+}
+
 @mixin size($width, $height) {
   width: $width;
   height: $height;
