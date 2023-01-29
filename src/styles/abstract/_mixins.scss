@@ -27,6 +27,11 @@
   gap: $gap;
 }
 
+@mixin flex-align {
+  display: flex;
+  align-items: center;
+}
+
 @mixin hover-color {
   &:hover {
     background: $hover-color;
@@ -37,6 +42,20 @@
   &:hover {
     text-decoration: underline;
   }
+}
+
+@mixin margin-vertical($top, $bottom:null) {
+  margin-top: $top;
+
+  @if($bottom){ margin-bottom: $bottom; }
+  @else { margin-bottom: $top; }
+}
+
+@mixin margin-horizontal($left, $right:null) {
+  margin-left: $left;
+
+  @if($right){ margin-right: $right; }
+  @else { margin-right: $left; }
 }
 
 @mixin padding-vertical($top, $bottom:null) {

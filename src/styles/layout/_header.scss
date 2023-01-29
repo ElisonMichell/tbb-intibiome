@@ -2,11 +2,18 @@ header {
 
   .header-bar {
     position: relative;
+    @include flex-align;
     @include size(100%, 5rem);
 
     .logo {
       height: 100%;
       @include horizontal-align;
+    }
+
+    .search {
+      display: block;
+      height: 24px;
+      @include margin-horizontal(auto, 20%);
     }
   }
 

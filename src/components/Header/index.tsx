@@ -1,12 +1,16 @@
 import React from 'react'
 import logo from '/src/assets/logo.png'
 import down from '/src/assets/caret-down.svg'
+import search from '/src/assets/search.svg'
 
 function Header() {
   return(
     <header>
       <div className='header-bar'>
-        <img src={logo} alt="logo" className='logo' />
+        <img className='logo' src={logo} alt="logo" />
+        <button className='search'>
+          <img src={search} alt="search button" />
+        </button>
       </div>
 
       <nav>
